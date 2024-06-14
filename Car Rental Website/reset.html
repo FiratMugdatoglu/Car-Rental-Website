@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset</title>
+  <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+  <form>
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <button type="button" onclick="resetPassword()">Reset Password</button>
+  </form>
+
+
+
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBQJRclG6Pob95tu87q8nMAd_WvPV9892w",
+      authDomain: "rentacar-27d9f.firebaseapp.com",
+      databaseURL: "https://rentacar-27d9f-default-rtdb.firebaseio.com",
+      projectId: "rentacar-27d9f",
+      storageBucket: "rentacar-27d9f.appspot.com",
+      messagingSenderId: "1038104579893",
+      appId: "1:1038104579893:web:7db3820d73e1b4df6ec67c"
+    };
+    firebase.initializeApp(config);
+
+    function resetPassword() {
+      var email = document.getElementById("email").value;
+      firebase.auth().sendPasswordResetEmail(email)
+        .then(function () {
+          // Password reset email sent
+          alert('Password reset email sent');
+        })
+        .catch(function (error) {
+          // Error occurred
+          alert(error.message);
+        });
+    }
+  </script>
+
+
+
+
+
+
+</body>
+
+</html>

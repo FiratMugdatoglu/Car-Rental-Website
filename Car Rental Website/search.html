@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentACar</title>
+  <link rel="stylesheet" href="search.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+
+
+  <section class="search" id="search">
+    <div class="form-container">
+        <form action="">
+            <div class="input-box">
+                <span>Location</span>
+                <select style="text-align: center;" id="Konum" name="select-example">
+                    <option value="Mersin">Mersin</option>
+                    <option value="İstanbul">İstanbul</option>
+                    <option value="Ankara">Ankara</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <span>Pick-Up Date</span>
+                <input type="date" name="" id="">
+            </div>
+            <div class="input-box">
+                <span>Return Date</span>
+                <input type="date" name="" id="">
+            </div>
+            <button id="showImagesBtn"><input type="submit" name="" id="" class="btn" value="Submit"></button>
+        </form>
+    </div>
+</section>
+
+
+
+  <header>
+    <div class="nav container">
+      <a href="#" class="logo">RentACar</a>
+      <i class='bx bx-shopping-bag' id="cart-icon"></i>
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+          
+        </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">$0</div>
+        </div>
+        <button type="button" class="btn-buy">Buy Now</button>
+        <i class='bx bx-x' id="close-cart"></i>
+      </div>
+    </div>
+  </header>
+
+
+  <section style="display:none;" class="shop container" id="imageContainer" >
+    <h2 class="section-title"> Shop Products</h2>
+    <div class="shop-content">
+
+      <div class="product-box">
+        <img src="image2/14126513.webp" alt="" class="product-img">
+        <h2 class="product-title">AUDI</h2>
+        <span class="price">$55</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+
+      <div class="product-box">
+        <img src="image2/en-popüler-10-araba.jpg" alt="" class="product-img">
+        <h2 class="product-title">AUDI</h2>
+        <span class="price">$55</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+
+      <div class="product-box">
+        <img src="image2/indir (1).jpg" alt="" class="product-img">
+        <h2 class="product-title">AUDI</h2>
+        <span class="price">$55</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+      <div class="product-box">
+        <img src="image2/indir.jpg" alt="" class="product-img">
+        <h2 class="product-title">AUDI</h2>
+        <span class="price">$55</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+      <div class="product-box">
+        <img src="image2/maxresdefault.jpg" alt="" class="product-img">
+        <h2 class="product-title">Range Rover</h2>
+        <span class="price">$45</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+      <div class="product-box">
+        <img src="image2/2023-dacia-duster-commercial.jpg" alt="" class="product-img">
+        <h2 class="product-title">Dacia</h2>
+        <span class="price">$65</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+
+
+      
+      <div class="product-box">
+        <img src="image2/4257435138b5fdad2ffcfb84d998a813.jpg" alt="" class="product-img">
+        <h2 class="product-title">AUDI</h2>
+        <span class="price">$45</span>
+        <i class='bx bx-shopping-bag  add-cart'></i>
+      </div>
+
+    </div>
+  </section>
+
+<script src="search.js"></script>
+
+  <script>
+    const showImagesBtn = document.getElementById("showImagesBtn");
+    const imageContainer = document.getElementById("imageContainer");
+    
+    showImagesBtn.addEventListener("click", function() {
+      if (imageContainer.style.display === "none") {
+        imageContainer.style.display = "block";
+      } else {
+        imageContainer.style.display = "none";
+      }
+    });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

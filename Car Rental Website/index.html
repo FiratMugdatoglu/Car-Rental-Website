@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent A Car</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>RentA</span>ACar</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="search.html" target="_blank">search</a>
+            <a href="#vehicles">vehicles</a>
+            <a href="#contact">contact</a>
+
+
+
+        </nav>
+
+        <div id="login-btn">
+            <a href="login.html" style="display: none;" id="login-link"><button class="btn">Log In/Register</button></a>
+            <button style="display: none;" onclick="signOut()" id="logout-btn" class="btn">Log Out</button>
+        </div>
+
+
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="image/vehicle-1.png" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Car</div>
+                        <div class="cart-price">$300</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">$0</div>
+            </div>
+            <button type="button" class="btn-buy">Buy Now</button>
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
+
+
+    </header>
+
+
+    <div class="login-form-container">
+
+        <span class="fas fa-times" id="close-login-form"></span>
+
+        <form action="">
+            <h3>user login</h3>
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="password" class="box">
+
+            <input type="submit" value="login now" class="btn">
+            <input type="submit" value=" Register now" class="btn">
+
+        </form>
+    </div>
+
+
+    <section class="home" id="home">
+        <h1 class="home-parallax">find your car</h1>
+        <img class="home-parallax" src="image/home-img.png">
+        <a href="#" class="btn home-parallax" data-speed="7">Cars</a>
+    </section>
+
+
+
+    <section class="vehicles" class="shop container" id="vehicles">
+
+        <h1 class="heading" class="section-title">our <span>vehicles</span></h1>
+
+        <div class="swiper vehicles-slider" class="shop-content">
+
+            <div class="swiper-wrapper" class="shop-content" id="image-container">
+
+
+               
+
+
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <form id="admin-form" style="display: none;">
+        <input type="file" id="fileButton" />
+        <br>
+        <h1>Araç Adı</h1> <input type="text" id="aracAdi">
+        <h1>Fiyatı</h1> <input type="text" id="fiyat">
+        <h1>indirimli Fiyatı</h1> <input type="text" id="indirimlifiyat">
+
+        <h1>Location</h1>
+        <select style="text-align: center;" id="Konum" name="select-example">
+            <option value="Mersin">Mersin</option>
+            <option value="İstanbul">İstanbul</option>
+            <option value="Ankara">Ankara</option>
+        </select>
+    </form>
+
+
+
+
+
+    <section class="footer" id="contact">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"> <i class="fas.fa-map-marker-alt "></i> İstanbul </a>
+                <a href="#"> <i class="fas.fa-map-marker-alt "></i> İzmir </a>
+                <a href="#"> <i class="fas.fa-map-marker-alt "></i> Ankara </a>
+                <a href="#"> <i class="fas.fa-map-marker-alt "></i> Mersin </a>
+                <a href="#"> <i class="fas.fa-map-marker-alt "></i> Adana </a>
+            </div>
+
+
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"> <i class="fas.fa-map-arrow-right "></i> home </a>
+                <a href="#search"> <i class="fas.fa-map-arrow-right "></i> Search </a>
+                <a href="#vehicles"> <i class="fas.fa-map-arrow-right "></i> Vehicles </a>
+                <a href="#contact"> <i class="fas.fa-map-arrow-right "></i> Contact </a>
+            </div>
+
+
+            <div class="box">
+                <h3>quick contact</h3>
+                <a href="#"> <i class="fas.fa-phone "></i> 0532-123-45-67 </a>
+                <a href="#"> <i class="fas.fa-phone  "></i> 0532-123-45-67 </a>
+                <a href="#"> <i class="fas.fa-envelope "></i> firatmugdatoglu@hotmail.com </a>
+            </div>
+
+
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fab fa-facebook-f "></i> facebook</a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+        </div>
+
+        <div class="credit">Firat Mugdatoglu | RentACar</div>
+
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-storage.js"></script>
+
+
+
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBQJRclG6Pob95tu87q8nMAd_WvPV9892w",
+            authDomain: "rentacar-27d9f.firebaseapp.com",
+            databaseURL: "https://rentacar-27d9f-default-rtdb.firebaseio.com",
+            projectId: "rentacar-27d9f",
+            storageBucket: "rentacar-27d9f.appspot.com",
+            messagingSenderId: "1038104579893",
+            appId: "1:1038104579893:web:7db3820d73e1b4df6ec67c"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+
+
+
+
+
+
+
+
+        const storage = firebase.storage();
+        const storageRef = storage.ref();
+
+        const imagesRef = storageRef.child('vehicles');
+        // Create a reference under which you want to list
+
+        // Find all the prefixes and items.
+        imagesRef.listAll()
+            .then((res) => {
+                res.prefixes.forEach((folderRef) => {
+                    // All the prefixes under listRef.
+                    // You may call listAll() recursively on them.
+                });
+                res.items.forEach((itemRef) => {
+                    // All the items under listRef.
+                    console.log(itemRef.getDownloadURL().then(r => {
+                        var carDiv = document.createElement('div');
+                        carDiv.className = 'swiper-slide box';
+
+
+
+                        var img = document.createElement('img');
+                        img.src = r;
+                        img.alt = '';
+                        img.className = 'product-img';
+                        carDiv.appendChild(img);
+
+                        var contentDiv = document.createElement('div');
+                        contentDiv.className = 'content';
+
+                        var title = document.createElement('h3');
+                        title.className = 'product-title';
+                        var araçadı = document.getElementById("aracAdi");
+                        title.innerHTML = araçadı.value;
+                        contentDiv.appendChild(title);
+
+                        var price = document.createElement('div');
+                        price.className = 'price';
+                        var fiyat = document.getElementById("fiyat");
+                        var indirimlifiyat = document.getElementById("indirimlifiyat")
+
+                        price.innerHTML = '<span>price: </span>' + (fiyat.value) + '/ <span style="text-decoration: line-through;">' + (indirimlifiyat.value) + '</span>';
+                        contentDiv.appendChild(price);
+
+                        var description = document.createElement('p');
+                        description.innerHTML = 'new <span class="fas fa-circle"></span> 2019 <span class="fas fa-circle"></span> automatic <span class="fas fa-circle"></span> Benzin <span class="fas fa-circle"></span> 260mph';
+
+                        contentDiv.appendChild(description);
+
+                        var button = document.createElement('a');
+                        button.href = 'search.html';
+                        button.target = '_blank';
+                        button.innerHTML = 'Cars';
+                        button.className = 'btn';
+                        contentDiv.appendChild(button);
+
+                        carDiv.appendChild(contentDiv);
+
+                        document.getElementById('image-container').appendChild(carDiv);
+                    }))
+                });
+            }).catch((error) => {
+                // Uh-oh, an error occurred!
+            });
+
+
+
+        var fileButton = document.getElementById('fileButton');
+        fileButton.addEventListener('change', function (e) {
+            var files = e.target.files;
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var storageRef = firebase.storage().ref('vehicles/' + file.name);
+                var task = storageRef.put(file);
+                task.on('state_changed',
+                    function progress(snapshot) {
+                        // File upload progress can be tracked here
+                    },
+                    function error(err) {
+                        // Handle errors here
+                    },
+                    function complete() {
+                        // Get the download URL after the file is uploaded
+                        task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+
+
+
+
+
+
+
+                            var carDiv = document.createElement('div');
+                            carDiv.className = 'swiper-slide box product-box';
+
+                            var img = document.createElement('img');
+                            img.src = downloadURL;
+                            img.alt = '';
+                            img.className = 'product-img';
+                            carDiv.appendChild(img);
+
+                            var contentDiv = document.createElement('div');
+                            contentDiv.className = 'content';
+
+                            var title = document.createElement('h3');
+                            title.className = 'product-title';
+                            var araçadı = document.getElementById("aracAdi");
+                            title.innerHTML = araçadı.value;
+                            contentDiv.appendChild(title);
+
+                            var price = document.createElement('div');
+                            price.className = 'price';
+                            var fiyat = document.getElementById("fiyat");
+                            var indirimlifiyat = document.getElementById("indirimlifiyat")
+
+                            price.innerHTML = '<span>price: </span>' + (fiyat.value) + '/ <span style="text-decoration: line-through;">' + (indirimlifiyat.value) + '</span>';;
+                            contentDiv.appendChild(price);
+
+                            var description = document.createElement('p');
+                            description.innerHTML = 'new <span class="fas fa-circle"></span> 2019 <span class="fas fa-circle"></span> automatic <span class="fas fa-circle"></span> Benzin <span class="fas fa-circle"></span> 260mph';
+                            contentDiv.appendChild(description);
+
+                            var button = document.createElement('a');
+                            button.href = 'search.html';
+                            button.target = '_blank';
+                            button.innerHTML = 'Cars';
+                            button.className = 'btn';
+                            contentDiv.appendChild(button);
+
+                            carDiv.appendChild(contentDiv);
+
+                            document.getElementById('image-container').appendChild(carDiv);
+                        });
+                    });
+            }
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-storage.js"></script>
+
+    <script>
+        // Firebase kütüphanesini dahil edin
+        var firebaseConfig = {
+            apiKey: "AIzaSyBQJRclG6Pob95tu87q8nMAd_WvPV9892w",
+            authDomain: "rentacar-27d9f.firebaseapp.com",
+            databaseURL: "https://rentacar-27d9f-default-rtdb.firebaseio.com",
+            projectId: "rentacar-27d9f",
+            storageBucket: "rentacar-27d9f.appspot.com",
+            messagingSenderId: "1038104579893",
+            appId: "1:1038104579893:web:7db3820d73e1b4df6ec67c"
+        };
+        firebase.initializeApp(firebaseConfig);
+        // Kullanıcı durumunu kontrol et
+
+
+
+
+
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            var loginLink = document.getElementById("login-link");
+            var logoutBtn = document.getElementById("logout-btn");
+            if (user) {
+                // Kullanıcı giriş yaptı
+
+                loginLink.style.display = "none";
+                logoutBtn.style.display = "block";
+
+            } else {
+                // Kullanıcı {
+                // Kullanıcı çıkış yaptı
+                loginLink.style.display = "block";
+                logoutBtn.style.display = "none";
+            }
+        });
+
+
+        // Admin yetkilendirmesi
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                if (user.email === "frt_4733@hotmail.com") {
+
+                    document.getElementById("admin-form").style.display = "block";
+
+
+                }
+            } else {
+                // Kullanıcı girişi yapmadıysa burada işlem yapabilirsiniz
+            }
+        });
+
+
+
+
+
+        // Kullanıcı çıkış yap
+        function signOut() {
+            firebase.auth().signOut();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
